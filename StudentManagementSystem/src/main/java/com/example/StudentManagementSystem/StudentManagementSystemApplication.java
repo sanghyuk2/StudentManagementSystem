@@ -1,5 +1,6 @@
 package com.example.StudentManagementSystem;
 
+import com.example.StudentManagementSystem.entity.Student;
 import com.example.StudentManagementSystem.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,6 +19,13 @@ public class StudentManagementSystemApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+		Student student1 = new Student("Lee", "Sanghyuk", "givemesomefoodplz@gmail.com");
+		studentRepository.save(student1);
 
+		Student student2 = new Student("Kim", "Sunme", "sunme@gmail.com");
+		studentRepository.save(student2);
+
+		Student student3 = new Student("tony", "stark", "tony@gmail.com");
+		studentRepository.save(student3);
 	}
 }
